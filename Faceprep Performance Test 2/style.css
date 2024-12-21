@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1200px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie img {
+    width: 100%; /* Ensures the image takes full width of its container */
+    height: 300px; /* Fixed height for all movie images */
+    object-fit: cover; /* Ensures the image scales and crops properly */
+    border-top-left-radius: 8px; /* Matches the movie container's border-radius */
+    border-top-right-radius: 8px;
+}
+
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .movie-list {
+        grid-template-columns: 1fr;
+    }
+
+    form input, form button {
+        font-size: 16px;
+    }
+}
+
+/* General Label Styling */
+label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #444;
+}
+
+/* Dropdown Styling */
+select {
+    width: 250px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Dropdown Arrow Styling */
+select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Dropdown Hover and Focus Effects */
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder Option Styling */
+select option[disabled] {
+    color: #aaa;
+}
+
+#contact {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+#contact h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4facfe;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#contact p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+#contact p a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact p a:hover {
+    text-decoration: underline;
+}
+
+/* Icons for Contact Details */
+#contact p::before {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+#contact p:nth-child(2)::before {
+    content: "📧";
+}
+
+#contact p:nth-child(3)::before {
+    content: "📞";
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #contact {
+        padding: 20px;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    #contact p {
+        font-size: 14px;
+    }
+}
+#contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#contact .content {
+    position: relative;
+    z-index: 2;
+    background: rgb(255, 247, 247); /* Semi-transparent dark background */
+    color: #fff;
+    text-align: center;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

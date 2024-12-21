@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            color: #fff;
+            z-index: 1000; /* Ensures navbar stays on top */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4facfe;
+        }
+
+        /* Contact Section Styling */
+        #contact {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 60px; /* Offset for fixed header */
+        }
+
+        #contact img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #contact .content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+            color: #fff;
+            text-align: center;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #contact h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #contact p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        #contact p a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #contact .content {
+                padding: 20px;
+            }
+
+            #contact h2 {
+                font-size: 24px;
+            }
+
+            #contact p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Movies</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="refund.html">Refund</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contact">
+        <img src="images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg" alt="Background Image">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:support@moviesystem.com">support@moviesystem.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+    </section>
+</body>
+</html>
